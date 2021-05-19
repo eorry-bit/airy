@@ -24,8 +24,10 @@ WORKDIR /opt/kafka
 
 COPY config/server.properties /etc/kafka/server.properties
 COPY config/zookeeper.properties /etc/kafka/zookeeper.properties
+COPY config/kafka-connect.properties /etc/kafka/kafka-connect.properties
 COPY /scripts/configure-kafka.sh /root/configure-kafka.sh
 COPY /scripts/configure-zookeeper.sh /root/configure-zookeeper.sh
+COPY /scripts/configure-kafka-connect.sh /root/configure-kafka-connect.sh
 COPY /scripts/entrypoint.sh /root/entrypoint.sh
 
 ENTRYPOINT ["/root/entrypoint.sh"]

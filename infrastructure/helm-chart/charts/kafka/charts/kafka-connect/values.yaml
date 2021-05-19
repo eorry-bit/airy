@@ -1,0 +1,7 @@
+replicaCount: 1
+image: infrastructure/kafka-connect
+imageTag: 2.7.0
+imagePullPolicy: Always
+servicePort: 8083
+kafka:
+  bootstrapServers: kafka-headless:9092
